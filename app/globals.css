@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Palette Djibril Bel - Thème Clair */
+    --background: 28 33% 97%;
+    /* #FDF8F2 - Un beige très clair et doux */
+    --foreground: 20 14% 18%;
+    /* #3B2F2F - Marron foncé pour le texte */
+
+    --card: 30 50% 99%;
+    /* #FFFCFA - Blanc cassé pour les cartes */
+    --card-foreground: 20 14% 18%;
+    /* #3B2F2F */
+
+    --popover: 30 50% 99%;
+    --popover-foreground: 20 14% 18%;
+
+    --primary: 20 14% 18%;
+    /* #3B2F2F - Le marron foncé comme couleur principale forte */
+    --primary-foreground: 30 33% 92%;
+    /* #F2EAE4 - Beige clair pour le texte sur les boutons primaires */
+
+    --secondary: 30 33% 92%;
+    /* #F2EAE4 - Un beige un peu plus soutenu */
+    --secondary-foreground: 20 14% 18%;
+    /* #3B2F2F */
+
+    --muted: 30 33% 92%;
+    --muted-foreground: 24 9% 45%;
+    /* #807873 - Un marron/gris doux pour le texte discret */
+
+    --accent: 28 66% 57%;
+    /* #E8A373 - Le caramel/doré comme couleur d'accent */
+    --accent-foreground: 20 14% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 28 24% 88%;
+    /* #E8E2DD */
+    --input: 28 24% 88%;
+    --ring: 28 66% 57%;
+    /* L'accent caramel pour le focus */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Palette Djibril Bel - Thème Sombre */
+    --background: 20 14% 12%;
+    /* #261F1F - Fond marron très foncé */
+    --foreground: 30 33% 92%;
+    /* #F2EAE4 - Texte beige clair */
+
+    --card: 20 14% 15%;
+    /* #2E2525 */
+    --card-foreground: 30 33% 92%;
+
+    --popover: 20 14% 12%;
+    --popover-foreground: 30 33% 92%;
+
+    --primary: 30 33% 92%;
+    /* #F2EAE4 - Le beige comme couleur primaire */
+    --primary-foreground: 20 14% 12%;
+    /* Texte marron foncé sur les boutons */
+
+    --secondary: 20 14% 18%;
+    /* #3B2F2F */
+    --secondary-foreground: 30 33% 92%;
+
+    --muted: 20 14% 18%;
+    --muted-foreground: 28 15% 65%;
+    /* #B3A9A2 */
+
+    --accent: 30 83% 76%;
+    /* #F5CBA7 - Le doré/caramel clair comme accent */
+    --accent-foreground: 20 14% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 20 14% 20%;
+    /* #3D3232 */
+    --input: 20 14% 20%;
+    --ring: 30 83% 76%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    /* Police plus moderne et lisible */
+  }
+}
