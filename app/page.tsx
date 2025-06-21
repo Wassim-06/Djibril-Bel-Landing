@@ -1,27 +1,26 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card" // CardFooter ajouté
 import {
   CheckCircle,
   Linkedin,
   PenTool,
   TrendingUp,
-  Sparkles, // Icône plus dynamique pour la crédibilité
-  Handshake, // Icône plus parlante pour les opportunités
+  Sparkles,
+  Handshake,
   FileText,
   MessageCircle,
   Edit3,
-  UserCheck, // Icône pour l'analyse de profil
-  Quote, // Icône pour le prête-plume
+  UserCheck,
+  Quote,
+  Calendar,
+  Briefcase,
 } from "lucide-react"
 import Image from "next/image"
 
-// NOTE: Pensez à ajouter une police comme 'Inter' à votre projet pour un look plus moderne.
-// Par exemple, dans votre layout.js de Next.js.
-
-export default function DjibrilBelLandingPage() {
-  // Remplacé par le vrai lien LinkedIn fourni
+export default function GBelLandingPage() {
   const linkedInProfileUrl = "https://www.linkedin.com/in/g-bel-9489ab356/"
+  const calendlyUrl = "https://calendly.com/gbelhadj739"
 
   return (
     <div className="flex flex-col min-h-dvh bg-background font-sans">
@@ -29,11 +28,10 @@ export default function DjibrilBelLandingPage() {
       <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
           <Link href="#" className="flex items-center gap-3">
-            {/* Logo simple et chic */}
             <div className="w-8 h-8 bg-primary text-primary-foreground flex items-center justify-center rounded-full font-bold text-lg">
-              DB
+              GB
             </div>
-            <span className="font-bold text-xl text-foreground">Djibril Bel</span>
+            <span className="font-bold text-xl text-foreground">G.Bel</span>
           </Link>
           <nav className="flex items-center gap-4">
             <Link href="#services" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden sm:block">
@@ -106,10 +104,9 @@ export default function DjibrilBelLandingPage() {
                 </ul>
               </div>
               <div className="flex justify-center">
-                {/* NOTE: Remplacez cette image par une photo professionnelle de Djibril */}
                 <Image
-                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=800&auto=format&fit=crop"
-                  alt="Entrepreneur travaillant sur son ordinateur, symbolisant le client de Djibril"
+                  src="/djibril-bel-photo-1.jpg"
+                  alt="Entrepreneur travaillant sur son ordinateur"
                   width={500}
                   height={500}
                   className="rounded-xl shadow-2xl object-cover"
@@ -158,6 +155,106 @@ export default function DjibrilBelLandingPage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION OFFRES MISE À JOUR (STYLE SAAS) */}
+        <section id="offers" className="w-full py-20 md:py-28 bg-secondary">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl flex items-center justify-center gap-3">
+                <Briefcase className="h-10 w-10 text-accent" /> Trois offres selon votre ambition
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+              {/* Offre Éco */}
+              <Card className="flex flex-col h-full">
+                <CardHeader className="flex-grow">
+                  <CardTitle className="text-2xl font-bold text-green-500">🟢 Offre Éco</CardTitle>
+                  <CardDescription>Pour garder une présence régulière sans pression.</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>2 posts</strong> par semaine</span>
+                    </li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Link href={calendlyUrl} target="_blank" rel="noopener noreferrer" passHref className="w-full">
+                    <Button variant="outline" className="w-full">
+                      Prendre RDV
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+
+              {/* Offre Standard (Mise en avant) */}
+              <Card className="flex flex-col h-full border-2 border-primary shadow-2xl relative transform scale-105">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="bg-primary text-primary-foreground text-sm font-semibold px-4 py-1 rounded-full">Le plus populaire</div>
+                </div>
+                <CardHeader className="flex-grow pt-8">
+                  <CardTitle className="text-2xl font-bold text-primary">🟠 Offre Standard</CardTitle>
+                  <CardDescription>Pour structurer votre visibilité et attirer vos premiers leads.</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>3 posts</strong> par semaine</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mt-1 mr-3 flex-shrink-0" />
+                      <span>Conseils de prospection</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-primary mt-1 mr-3 flex-shrink-0" />
+                      <span>Suivi stratégique personnalisé</span>
+                    </li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Link href={calendlyUrl} target="_blank" rel="noopener noreferrer" passHref className="w-full">
+                    <Button className="w-full">
+                      Prendre RDV
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+
+              {/* Offre Premium */}
+              <Card className="flex flex-col h-full">
+                <CardHeader className="flex-grow">
+                  <CardTitle className="text-2xl font-bold text-blue-500">🔵 Offre Premium</CardTitle>
+                  <CardDescription>Pour faire de LinkedIn un vrai levier de croissance.</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>3 à 4 posts</strong> par semaine</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>2 carrousels</strong> par mois</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>Accompagnement complet</strong></span>
+                    </li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Link href={calendlyUrl} target="_blank" rel="noopener noreferrer" passHref className="w-full">
+                    <Button variant="outline" className="w-full">
+                      Prendre RDV
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
             </div>
           </div>
         </section>
@@ -229,10 +326,9 @@ export default function DjibrilBelLandingPage() {
         {/* Final CTA Section */}
         <section id="contact" className="w-full py-20 md:py-32 bg-secondary">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            {/* NOTE: Utilisez une VRAIE photo de Djibril, c'est crucial pour la confiance */}
             <Image
-              src="/djibril-bel-photo.jpg" // A remplacer par le chemin vers la photo
-              alt="Photo de Djibril Bel, stratège de contenu LinkedIn"
+              src="/djibril-bel-photo.jpg"
+              alt="Photo de G.Bel, stratège de contenu LinkedIn"
               width={120}
               height={120}
               className="rounded-full mx-auto mb-6 shadow-lg ring-4 ring-accent/50"
@@ -243,10 +339,15 @@ export default function DjibrilBelLandingPage() {
             <p className="mt-4 text-muted-foreground md:text-lg max-w-xl mx-auto">
               Discutons de vos ambitions. Le meilleur moment pour commencer, c'était hier. Le deuxième meilleur, c'est maintenant.
             </p>
-            <div className="mt-8 flex justify-center">
-              <Link href={linkedInProfileUrl} target="_blank" rel="noopener noreferrer" passHref>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href={calendlyUrl} target="_blank" rel="noopener noreferrer" passHref>
                 <Button size="lg" className="text-lg px-8 py-6">
-                  <MessageCircle className="mr-3 h-6 w-6" /> Écrivez-moi en DM sur LinkedIn
+                  <Calendar className="mr-3 h-6 w-6" /> Prendre rendez-vous
+                </Button>
+              </Link>
+              <Link href={linkedInProfileUrl} target="_blank" rel="noopener noreferrer" passHref>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                  <MessageCircle className="mr-3 h-6 w-6" /> DM sur LinkedIn
                 </Button>
               </Link>
             </div>
@@ -257,7 +358,7 @@ export default function DjibrilBelLandingPage() {
       {/* Footer */}
       <footer className="w-full py-6 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 md:px-6 flex flex-col sm:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Djibril Bel. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} G.Bel. Tous droits réservés.</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <Link href={linkedInProfileUrl} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
               <Linkedin className="h-5 w-5" />
