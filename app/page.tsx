@@ -63,9 +63,9 @@ export default function GBelLandingPage() {
                 J’aide les entrepreneurs à briller sur LinkedIn. Fini le manque de temps ou d'inspiration. Je conçois pour vous des contenus qui créent des relations, renforcent votre crédibilité et génèrent des revenus.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="#free-test" passHref>
+                <Link href={calendlyUrl} target="_blank" rel="noopener noreferrer" passHref>
                   <Button size="lg" className="w-full sm:w-auto">
-                    Commencer avec un Test Gratuit
+                    Prendre rendez-vous <Calendar className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 <Link href={linkedInProfileUrl} target="_blank" rel="noopener noreferrer" passHref>
