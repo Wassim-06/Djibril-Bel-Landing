@@ -334,8 +334,7 @@ export default function GBelLandingPage() {
               className="rounded-full mx-auto mb-6 shadow-lg ring-4 ring-accent/50"
             />
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Prêt à passer au niveau supérieur ?
-            </h2>
+              Analyse fine, stratégie claire, résultats concrets            </h2>
             <p className="mt-4 text-muted-foreground md:text-lg max-w-xl mx-auto">
               Discutons de vos ambitions. Le meilleur moment pour commencer, c'était hier. Le deuxième meilleur, c'est maintenant.
             </p>
