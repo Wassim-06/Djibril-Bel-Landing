@@ -20,7 +20,7 @@ import Image from "next/image"
 
 export default function GBelLandingPage() {
   const linkedInProfileUrl = "https://www.linkedin.com/in/g-bel-9489ab356/"
-  const calendlyUrl = "https://calendly.com/gbelhadj739"
+  const calendlyUrl = "https://calendly.com/-gbel"
 
   return (
     <div className="flex flex-col min-h-dvh bg-background font-sans">
